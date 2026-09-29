@@ -17,3 +17,9 @@ or performed. So, this is blocked and this is thread per-request model.
 Default threads inside a thread pool of a tomcat server is 200
 
 ![img_1.png](img_1.png)
+
+Netty Server works with thread pool mechanism where server thread process the request to the database.
+
+If database takes a bit time to process the request, then the thread comes to pool so that it can process another request. 
+
+this is called a non-blocking operation where a thread is not blocked for that request.
